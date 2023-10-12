@@ -5,9 +5,16 @@
         <div class="row">
             <div class="col show-col">
                 <div class="show-box d-flex flex-column gap-2">
+
                     <h1 class="display-4">{{$project->title}}</h1>
 
                     <img src="{{asset("/storage/" . $project->thumb)}}" alt="" class="">
+
+                    <div class="badges-container mt-3">
+                        @foreach($project->technologies as $singlePro)
+                            <p class="badge text-dark" style="background-color: rgb({{$singlePro->color}})"> {{$singlePro->name}}</p>            
+                        @endforeach
+                    </div>
 
                     <p class="mt-2">{{$project->description}}</p>
 
@@ -18,6 +25,11 @@
                     <a href="{{$project->link}}" class="fs-5 text-decoration-none">GitHub</a>
                     <p>Release: {{$project->release->format("d-m-Y")}}</p>
 
+                    <div class="badges-container">
+                        @foreach($project->technologies as $singlePro)
+                            <p class="badge text-dark" style="background-color: rgb({{$singlePro->color}})"> {{$singlePro->name}}</p>            
+                        @endforeach
+                    </div>
                 </div>
 
                 {{-- BUTTON CONTAINER --}}
