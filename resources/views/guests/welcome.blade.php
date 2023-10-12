@@ -31,7 +31,6 @@
                         <img src="{{asset("/storage/" . $project->thumb)}}" class="card-img-top" alt=".">
                         <div class="card-body d-flex flex-column">
                           <h5 class="card-title">{{$project->title}}</h5>
-                          <small>{{implode(",", $project->language )}}</small>
                           <div class="link-container text-center mt-5">
                               <a href="{{route("admin.projects.show", $project->slug)}}" class="btn btn-primary w-25">Detail</a>
                           </div>

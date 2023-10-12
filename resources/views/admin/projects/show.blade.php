@@ -8,7 +8,6 @@
                     <h1 class="display-4">{{$project->title}}</h1>
 
                     <img src="{{asset("/storage/" . $project->thumb)}}" alt="" class="">
-                    <small class="fw-bold">{{implode(",", $project->language )}}</small>
 
                     <p class="mt-2">{{$project->description}}</p>
 

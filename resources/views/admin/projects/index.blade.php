@@ -17,7 +17,6 @@
                         @foreach ($projects as $singleProject )  
                         <tr>
                             <td>{{$singleProject->title}}</td>
-                            <td>{{implode(",", $singleProject->language)}}</td>
                             <td>{{$singleProject->link}}</td>
                             <td>
                                 <a href="{{route("admin.projects.show", $singleProject->slug )}}" class="btn btn-primary btn-lg" type="button">Dettagli</a>

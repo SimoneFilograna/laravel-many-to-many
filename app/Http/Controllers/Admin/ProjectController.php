@@ -41,8 +41,6 @@ class ProjectController extends Controller
         $data["slug"] = $this->generateSlug($data["title"]);
 
 
-        $data["language"] = explode(",", $data["language"]);
-
         $data["thumb"] = Storage::put("projects", $data["thumb"]);
 
         //creo l'istanza di Project, fill per assegnare i dati all'istanza
@@ -114,7 +112,6 @@ class ProjectController extends Controller
             $data["slug"] = $this->generateSlug($data["title"]);
         }
 
-        $data["language"] = explode(",", $data["language"]);
 
         if(isset($data["thumb"])){
             if($project->thumb){

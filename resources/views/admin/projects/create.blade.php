@@ -18,16 +18,7 @@
                         @enderror
                     </div>
                     
-                    {{-- language --}}
-
-                    <div class="mb-3">
-                        <label for="language" class="form-label">Languages</label>
-                        <input type="text" class="form-control @error("language") is-invalid                            
-                        @enderror" id="language" name="language" value="{{old("language")}}" >
-                        @error("language")
-                            <div class="invalid-feedback">{{$message}}</div>
-                        @enderror
-                    </div>
+                   {{-- EDIT --}}
 
                     <div class="mb-3">
                         <label for="type_id" class="form-label">Type</label>
