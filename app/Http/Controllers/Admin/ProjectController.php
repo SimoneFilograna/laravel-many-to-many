@@ -50,6 +50,13 @@ class ProjectController extends Controller
 
         $project = Project::create($data);
 
+        if($data["technologies"]){
+            $project->technologies()->attach($data["technologies"]);
+        }
+
+        
+
+
         return redirect()->route("admin.projects.show", $project->slug);
     }
 
@@ -143,6 +150,8 @@ class ProjectController extends Controller
         if ($project->thumb) {
             Storage::delete($project->thumb);
         }
+
+        $project->technologies()->detach();
 
         $project->delete();
 
