@@ -10,7 +10,6 @@
                             <th>Title</th>
                             <th>Language</th>
                             <th>Link</th>
-                            <th>Action</th>
                         </tr>                    
                     </thead>
                     <tbody>
