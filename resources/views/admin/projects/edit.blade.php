@@ -36,6 +36,23 @@
                         @enderror
                     </div>
 
+                    {{-- TECHNOLOGIES --}}
+
+                    <div class="mb-3 mt-2">
+                        <label class="form-label mb-3">Technologies</label>
+
+                        <div class="">
+                            @foreach ($technologies as $singleTech)
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" value="{{$singleTech->id}}" {{$project->technologies?->contains($singleTech->id) ? "checked" : ""}} id="flexCheckDefault" name="technologies[]">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    {{$singleTech->name}}
+                                </label>                            
+                            </div>
+                            @endforeach
+                        </div>
+                    </div>
+
                     {{-- link --}}
 
                     <div class="mb-3">

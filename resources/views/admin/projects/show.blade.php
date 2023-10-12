@@ -25,11 +25,6 @@
                     <a href="{{$project->link}}" class="fs-5 text-decoration-none">GitHub</a>
                     <p>Release: {{$project->release->format("d-m-Y")}}</p>
 
-                    <div class="badges-container">
-                        @foreach($project->technologies as $singlePro)
-                            <p class="badge text-dark" style="background-color: rgb({{$singlePro->color}})"> {{$singlePro->name}}</p>            
-                        @endforeach
-                    </div>
                 </div>
 
                 {{-- BUTTON CONTAINER --}}
