@@ -23,12 +23,12 @@ class GenericProjectRequest extends FormRequest
     {
         return [
             "title"=>"required|string",
-            "language"=>"required|string",
             "link"=>"required|string",
             "description"=>"required|string",
             "thumb"=>"nullable|image|max:5120",
             "release"=>"required|date",
-            "type_id"=>"exists:types,id"
+            "type_id"=>"exists:types,id",
+            "technologies"=> "nullable"
 
         ];
     }
@@ -37,7 +37,6 @@ class GenericProjectRequest extends FormRequest
 {
     return [
         "title.required" => "Il Titolo è obbligatorio",           
-        "language.required" => "I linguaggi utilizzati sono obbligatori",
         "link.required" => "Il link di GitHub è obbligatorio",
         "description.required" => "La descrizione è obbligatoria",
         "thunb.max" => "Ops! L'immagine è troppo grande",

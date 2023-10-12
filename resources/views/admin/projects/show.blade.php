@@ -13,7 +13,7 @@
 
                     <p>Type: {{$project->type->type ?? ""}}</p>
 
-
+                    
 
                     <a href="{{$project->link}}" class="fs-5 text-decoration-none">GitHub</a>
                     <p>Release: {{$project->release->format("d-m-Y")}}</p>
