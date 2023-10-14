@@ -78,7 +78,8 @@ body{
     .edit-container{
         height: 100vh;
 
-        button{
+        button, 
+        a{
             background-color: variables.$button-color;
             border: 0;
         

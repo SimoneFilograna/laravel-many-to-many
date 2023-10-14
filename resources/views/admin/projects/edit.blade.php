@@ -99,7 +99,8 @@
 
                     {{-- submit button --}}
 
-                    <button type="submit" class="btn btn-primary mt-4">Submit</button>
+                    <button type="submit" class="btn btn-primary mt-4">SUBMIT</button>
+                    <a class="btn btn-primary mt-4" href="{{route("admin.projects.index")}}"> CANCEL</a>
 
                 </form>
             </div>

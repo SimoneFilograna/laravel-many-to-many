@@ -131,8 +131,9 @@ class ProjectController extends Controller
             $data["thumb"] = Storage::put("projects", $data["thumb"]);
         }
 
-        
-        $project->technologies()->sync($data["technologies"]);
+        if(isset($data["technologies"])){
+            $project->technologies()->sync($data["technologies"]);
+        }
         
 
         $project->update($data);
